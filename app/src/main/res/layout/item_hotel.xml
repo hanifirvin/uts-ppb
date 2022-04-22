@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="200dp"
+        android:id="@+id/img_hotel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/anyer_hotel"/>
+    
+    <TextView
+        android:id="@+id/tvNama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="Nama Hotel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_hotel"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintEnd_toStartOf="@id/icFavorite"
+        android:textStyle="bold"/>
+    
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:id="@+id/icFavorite"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"/>
+    
+    <RatingBar
+        android:id="@+id/hotelType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressBackgroundTint="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/tvNama"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        app:layout_constraintStart_toEndOf="@id/img_hotel"
+        android:layout_marginStart="5dp"
+        android:progressTint="@color/gold"/>
+    
+    <TextView
+        android:id="@+id/tvReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="5dp"
+        tools:text="1441 Ulasan"
+        app:layout_constraintTop_toBottomOf="@id/hotelType"
+        app:layout_constraintStart_toEndOf="@id/img_hotel"/>
+    
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:textColor="@color/black"
+        tools:text="Nama Hotel"
+        android:drawableStart="@drawable/ic_baseline_place_24"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvReview"
+        app:layout_constraintStart_toEndOf="@id/img_hotel"
+        app:layout_constraintEnd_toStartOf="@id/icFavorite"/>
+    
+    <TextView
+        android:id="@+id/tvNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        tools:text="Termasuk Sarapan"
+        app:layout_constraintBottom_toBottomOf="@id/img_hotel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="5dp"/>
+    
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        tools:text="Rp 200.000"
+        app:layout_constraintBottom_toTopOf="@id/tvNote"
+        android:layout_marginHorizontal="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/tvDesc"
+        android:textColor="@color/black"
+        tools:text="2 Dewasa"
+        app:layout_constraintBottom_toTopOf="@id/tvPrice"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
